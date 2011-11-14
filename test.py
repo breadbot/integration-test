@@ -5,6 +5,6 @@ import unittest
 
 class Test(unittest.TestCase):
     def test_fail(self):
-	print os.getcwd()
-        self.fail()
+        print "BUILD_NUMBER(%s)" % (os.environ['BUILD_NUMBER'])
+	self.fail()
         pass
